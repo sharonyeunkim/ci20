@@ -1,0 +1,77 @@
+html, body {
+  width:100%;
+  height:100%;
+  margin: 0;
+}
+div {
+  width:100%;
+  height: 100%;
+  float: left;
+}
+.topdiv {
+  height: 70%;
+  width:100%;
+  background-color: red;
+}
+.topdivleft {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+.topdivleftcorner {
+  width:100%;
+  height: 48%;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 0em 2em 3em 0em
+}
+.topdivbottomleft {
+  width:100%;
+  height:48%;
+  background-color: white;
+  display: inline-block;
+  border-style: solid;
+  border-color: black;
+  border-width: 0em 2em 3em 0em;
+}
+.bottomdiv {
+  height:30%;
+  width:100%;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 3em 0em 0em 0em;
+}
+.bottomdivleft{
+  width: 80%;
+  height:100;
+  float: left;
+  border-style: solid;
+  border-color: black;
+  border-width: 0em 5em 0em 0em;
+}
+.blue{
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: blue;
+  border-style: solid;
+  border-color: black;
+  border-width: 0em 2em 0em 0em;
+}
+
+.bottomdivright {
+  width: 15%;
+  height: 100%;
+  background-color: yellow;
+}
+.white {
+  width: 100%;
+  height: 47%;
+  background-color: white;
+  float: left;
+  border-style: solid;
+  border-color: black;
+  border-width: 0em 0em 3em 0em;
+}
