@@ -1,0 +1,118 @@
+body {
+  width: 100%;
+  height: 60%;
+  background-color: #3b3b3c;
+}
+div {
+  margin: .5vw;
+}
+.howto {
+  width: 100vw;
+  height: 90vw;
+  padding-bottom: 5em;
+  /* background-color: orange; */
+}
+.onee{
+  padding-top: 20em;
+}
+.p h1 {
+  font-size: 16em;
+  text-align: center;
+  font-family: helvetica;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  margin-top: -.75em;
+}
+.p:hover h1{
+  color: white;
+  -webkit-transform: scale(1.2);
+  animation-timing-function: ease-in-out;
+}
+.keypad {
+  display: flex;
+  flex-direction: row;
+}
+.main {
+  flex: 3;
+}
+.side {
+  flex: 1;
+}
+
+.step {
+  width: 22vw;
+  height: 15vw;
+  background-color: grey;
+  float: left;
+  border-radius: 1.5em;
+}
+/* STEP WIDTH APPLY IN ONE LINE INSTEAD OF REPEATING */
+.step p {
+  color: white;
+  font-family: helvetica;
+  margin-top: -6em;
+  margin-left: 4.5em;
+  width: 8.5em;
+  text-align: center;
+  font-size: 1.5em;
+}
+/* .step #stepone { display: block; font-size: 3em;} */
+.step h1 {display: block; font-family: helvetica;
+  text-align: left;
+  padding-left: .5em;
+  font-size: 6em;
+  color: white;}
+/* .step p { display: none; display: inline-flex;} */
+/* .step:active h1 { display: none; } */
+
+.step:active {
+    border-style: solid;
+    border-color: #3633436;
+    box-sizing: border-box;
+    border-radius: 2em;
+    background-color: #abadb0;
+}
+.step:active p{
+  color: #d8d9da;
+}
+.side {
+  width: 20vw;
+  height: 10vw;
+  /* background-color: grey;
+  float: left;
+  margin: 3em 0em 0em 0em;
+  border-radius: 1.5em; */
+}
+.sidee {
+  width: 20vw;
+  height: 10vw;
+  background-color: grey;
+  float: left;
+  margin: 3em 0em 0em 0em;
+  border-radius: 1.5em;
+}
+.sidee h1{
+  display: block; font-family: helvetica;
+    text-align: center;
+    float: left;
+    font-size: 2.8em;
+    margin-left: 1em;
+    color: white;
+}
+.sidee:active{
+  border-style: solid;
+  border-color: #00000;
+  box-sizing: border-box;
+
+}
+@media (max-width: 700px) {
+  /* .one {width: 30vw;}
+  .two {width: 30vw;}
+  .three {width: 30vw;} */
+  .step {width: 30vw;}
+  .keypad {display: inline-block;
+    flex-direction: column;}
+}
+/* .step:active p { display: block; } */
+
+/*MEDIA WUERY ON THE BOTTOM BC READ TOP TO BOTTOM */

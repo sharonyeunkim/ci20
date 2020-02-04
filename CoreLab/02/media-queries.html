@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="initial-scale=1">
+    <!-- VERY IMPORTANT THE ABOVE INFO FOR MOBILE  ^^ what does initial scale mean?-->
+    <title></title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      body{
+        display: flex;
+        flex-direction: row;
+      }
+      div {
+        flex: 1;
+      }
+      div:nth-of-type(even) {
+        background-color:sienna;
+        flex:}
+      div:nth-of-type(odd) {
+        background-color:chocolate;}
+
+      @media (max-width: 700px) {
+        /*more css goes here*/
+        /*if the above statement is true it will apply these
+        styles */
+
+          body{
+            flex-direction: column;
+
+          }
+      }
+      @media (hover:none) {
+        div:nth-of-type(even) {
+          background-color:linen;}
+          /* THERE IS NO HOVER FOR MOBILE. THIS IS FOR MOBILE */
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
+</html>
