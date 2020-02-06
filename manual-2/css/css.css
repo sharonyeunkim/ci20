@@ -40,6 +40,7 @@ div {
   -webkit-text-stroke: 2px white;
   color: transparent;
   margin-top: -.75em;
+  transition: transform .2s;
 }
 .p:hover h1{
   color: white;
@@ -67,6 +68,7 @@ div {
 .step p {
   display: none;
 }
+
 .side {
   flex: 1;
 }
@@ -75,7 +77,9 @@ div {
   display: flex;
   flex-direction: row;
 }
-
+.keypad {
+  margin-top: -6em;
+}
 .step {
   /* width: 23vw; */
   height: 15vw;
@@ -134,7 +138,7 @@ div {
 .sidee {
   width: 20vw;
   height: 10vw;
-  background-color: transparent;
+  /* background-color: transparent; */
   float: left;
   margin: 3em 0em 0em 0em;
   border-radius: 1.5em;
@@ -158,11 +162,11 @@ div {
     -webkit-text-stroke: 2px white; */
 }
 .sidee:active{
-  border-style: solid;
-  border-color: #00000;
   box-sizing: border-box;
-
-}
+  border-style: solid;
+  border-color: white;
+  background-color: #4d4d4f;
+  }
 @media (max-width: 700px) {
   /* .one {width: 30vw;}
   .two {width: 30vw;}
