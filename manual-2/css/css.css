@@ -79,7 +79,7 @@ div {
   flex-direction: row;
 }
 .keypad {
-  margin-top: -6em;
+  margin-top: -1em;
 }
 .step {
   /* width: 23vw; */
@@ -179,6 +179,7 @@ div {
   .sidee h1{
     display: block;
       flex-direction: column;
+      padding: 2em;
   }
 }
 /* .step:active p { display: block; } */
