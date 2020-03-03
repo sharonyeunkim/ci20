@@ -23,7 +23,7 @@ body {
 }
 #a.active {
   visibility: visible;
-  -webkit-animation: slide 1.5s linear;
+  -webkit-animation: slide 3s linear;
   -webkit-animation-iteration-count: 1;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -59,7 +59,7 @@ body {
 #b.active {
   animation-name: example; /*example is name for keyframe*/
   visibility: visible;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
   animation-delay: 0s;
 
 }
@@ -102,7 +102,7 @@ body {
 #c.active {
   visibility: visible;
   animation-name:grow;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -118,7 +118,7 @@ body {
 }
 
 #d {
-  background-color: #66A1D7;
+  background-color: #FDF5DA;
   width: 70vw;
   height: 10vw;
   position: absolute;
@@ -129,7 +129,7 @@ body {
 #d.active {
   visibility: visible;
   animation-name:d;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -159,7 +159,7 @@ body {
 #e.active {
   visibility: visible;
   animation-name:e;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -168,9 +168,9 @@ body {
 @-webkit-keyframes e {
   0% {-webkit-transform: scale( 0 );
        opacity: 1;}
-  40% {-webkit-transform: scale(.25);}
-  90% {opacity: 1;}
-  97% {opacity: .5}
+  90% {-webkit-transform: scale(.25);
+    opacity: 0;}
+  97% {opacity: 0}
   100% {-webkit-transform: scale( .25 );
        opacity: 0;}
 }
@@ -178,21 +178,21 @@ body {
   background-color: ;
   width: ;
   height: 0;
-  border-left: 40vw solid transparent;
-  border-right: 40vw solid transparent;
-  border-bottom: 80vw solid #7EC56B;
+  border-left: 20vw solid transparent;
+  border-right: 20vw solid transparent;
+  border-bottom: 40vw solid #E5D9E3;
   top: 30%;
   left: 40%;
   position: absolute;
-  top: calc(50% - 22vw);
-  left: calc(50% - 22vw);
+  top: calc(50% - 12vw);
+  left: calc(50% - 12vw);
   visibility: hidden;
 }
 
 #f.active {
   visibility: visible;
   animation-name:f;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -203,11 +203,12 @@ body {
        opacity: 1;
        -webkit-transform: rotate(-180deg);
     }
-  80% {
+  50% {
     opacity: 1;
+    -webkit-transform: scale(1)
   }
   100% { -webkit-transform: rotate(100deg);
-        -webkit-transform: scale(1);
+        -webkit-transform: scale(0);
          opacity: 0;
      }
 }
@@ -224,7 +225,7 @@ body {
 #fcirc.active {
   visibility: visible;
   animation-name: fcirc ;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -247,21 +248,22 @@ body {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  left: 0%;
+  top: 0%;
+  left: 85%;
   visibility: hidden;
 }
 #g.active {
   visibility: visible;
   animation-name:g;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
 }
 @-webkit-keyframes g {
- 0% {width: 0vw; height: 100vh;}
+ 0% {width: 0vw; height: 10vh;}
  80% {opacity: 1}
- 100% {width:100vw; height: 100vh; opacity: 0}
+ 100% {width:10vw; height: 100vh; opacity: 0}
 }
 
 #h {
@@ -278,7 +280,7 @@ body {
 #h.active {
   visibility: visible;
   animation-name:h;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -313,7 +315,7 @@ body {
 }
 #i.active {
   visibility: visible;
-  -webkit-animation: i 1s linear;
+  -webkit-animation: i 3s linear;
   -webkit-animation-iteration-count: 1;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -344,7 +346,7 @@ body {
 }
 #ii.active {
   visibility: visible;
-  -webkit-animation: ii 1s linear;
+  -webkit-animation: ii 3s linear;
   -webkit-animation-iteration-count: 1;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -369,19 +371,19 @@ body {
 }
 
 #j {
-  background-color: #F58557;
-  width: 5vw;
+  background-color: #F5E1E3;
+  width: 100vw;
   height: 70vw;
   position: absolute;
-  left: 15%;
-  top: 20%;
+  left: 0%;
+  top: 90%;
   visibility: hidden;
 }
 
 #j.active {
   visibility: visible;
   animation-name:d;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -390,7 +392,7 @@ body {
 @-webkit-keyframes j {
   0% {width: 5vw; height: 0vw;}
   80% {opacity: 1}
-  100% {width:5vw; height: 70vw; opacity: 0}
+  100% {width:100vw; height: 70vw; opacity: 0}
 }
 #jj {
   background-color: #bf1e2c;
@@ -405,7 +407,7 @@ body {
 #jj.active {
   visibility: visible;
   animation-name:jj;
-  animation-duration: 1.1s;
+  animation-duration: 3s;
   animation-delay: .1s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -431,7 +433,7 @@ body {
 #jjj.active {
   visibility: visible;
   animation-name:jjj;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-delay: .2s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -457,16 +459,16 @@ body {
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
-      border-right: 4px solid #e74c3c;
-      border-bottom: 4px solid #e74c3c;
-      border-top: 4px solid #e74c3c;
-      border-left: 4px solid #e74c3c;
+      border-right: 4px solid #F5E1E3;
+      border-bottom: 4px solid #D6E2D3;
+      border-top: 4px solid #D6E2D3;
+      border-left: 4px solid #F5E1E3;
       visibility: hidden;
 }
 #k.active {
   visibility: visible;
   animation-name:k;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -506,7 +508,7 @@ body {
 #s.active {
   visibility: visible;
   animation-name:s;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -528,13 +530,13 @@ body {
 
 
 #l {
-  width: 20vw; /* default make responsive with vw */
-  height: 20vw; /*not vh for mobile bc circle gets squished */
+  width: 7vw; /* default make responsive with vw */
+  height: 7vw; /*not vh for mobile bc circle gets squished */
   min-width: 50px; /*in case it gets too tiny, it has a limit MUST DO IN PIXELS */
   min-height: 50px; /* same reason as above */
   max-width: 400px;
   max-height: 400px;
-  background-color: #FFCF39;
+  background-color: #CAD0D6;
   border-radius: 50%;
   /* position: fixed; */
   position: absolute;
@@ -544,7 +546,7 @@ body {
 }
 #l.active {
   visibility: visible;
-  -webkit-animation: l 1.5s linear;
+  -webkit-animation: l 3s linear;
   -webkit-animation-iteration-count: 1;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -552,16 +554,16 @@ body {
 }
 @-webkit-keyframes l {
   0% {
-    left: 0;
-    top: 0;
+    left: 80%;
+    top: -40%;
   }
   50% {
     left: 50%;
     top: 100vh;
   }
   100% {
-    left: 80%;
-    top: -40%;
+    left: 0%;
+    top: -70%;
   }
 
 }
@@ -580,7 +582,7 @@ body {
 #m.active {
   animation-name: m; /*example is name for keyframe*/
   visibility: visible;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
   animation-delay: 0s;
 
 }
@@ -618,7 +620,7 @@ body {
 #n.active {
   visibility: visible;
   animation-name: n ;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -648,7 +650,7 @@ body {
 #o.active {
   visibility: visible;
   animation-name:o;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -678,7 +680,7 @@ body {
 #p.active {
   visibility: visible;
   animation-name:p;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -697,21 +699,21 @@ body {
   background-color: ;
   width: ;
   height: 0;
-  border-left: 40vw solid transparent;
-  border-right: 40vw solid transparent;
-  border-bottom: 80vw solid #7EC56B;
+  border-left: 30vw solid transparent;
+  border-right: 30vw solid transparent;
+  border-bottom: 60vw solid #F5E1E3;
   top: 30%;
   left: 40%;
   position: absolute;
-  top: calc(50% - 22vw);
-  left: calc(50% - 22vw);
+  top: calc(50% - 17vw);
+  left: calc(50% - 17vw);
   visibility: hidden;
 }
 
 #q.active {
   visibility: visible;
   animation-name:q;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -743,7 +745,7 @@ body {
 #r.active {
   visibility: visible;
   animation-name: r ;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
@@ -762,7 +764,7 @@ body {
 }
 
 #t {
-  background-color: #F58557;
+  background-color: #CAD0D6;
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -772,15 +774,15 @@ body {
 #t.active {
   visibility: visible;
   animation-name:t;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
 }
 @-webkit-keyframes t {
- 0% {width: 0vw; height: 100vh;}
+ 0% {width: 0vw; height: 0vh;}
  80% {opacity: 1}
- 100% {width:100vw; height: 100vh; opacity: 0}
+ 100% {width:10vw; height: 100vh; opacity: 0}
 }
 
 
@@ -790,20 +792,21 @@ body {
   height: 100vh;
   position: absolute;
   top: 0%;
+  left: 30%;
   visibility: hidden;
 }
 #w.active {
   visibility: visible;
   animation-name:w;
-  animation-duration: 1s;
+  animation-duration: 3s;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: ease-in-out;
 }
 @-webkit-keyframes w {
- 0% {width: 100vw; height: 0vh;}
+ 0% {width: 10vw; height: 0vh;}
  80% {opacity: 1;}
- 100% {width:100vw; height: 100vh; opacity: 0}
+ 100% {width:10vw; height: 100vh; opacity: 0}
 }
 
 #z {
@@ -821,7 +824,7 @@ body {
 }
 #z.active {
   visibility: visible;
-  -webkit-animation: z 1s linear;
+  -webkit-animation: z 3s linear;
   -webkit-animation-iteration-count: 1;
   -webkit-animaton-fill-mode: forwards;
   animation-fill-mode: forwards;
