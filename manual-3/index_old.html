@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <title>INTERACTIVE TYPE</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2|Krona+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="container">
+  <span id="cursor">|</span>
+</div>
+<!-- <div id="keyCode = "65"> </div> -->
+
+
+  <script type="text/javascript" src="SVG/svg.min.js"</script>
+  <script type="text/javascript" src="js/init.js"></script>
+
+<script>
+
+  var svg1 = SVG(window.innerWidth, window.innerHeight);
+  var svg2 = SVG(window.innerWidth, window.innerHeight);
+  var svg3 = SVG(window.innerWidth, window.innerHeight);
+  var svg4 = SVG(window.innerWidth, window.innerHeight);
+  var svg5 = SVG(window.innerWidth, window.innerHeight);
+  var svg6 = SVG(window.innerWidth, window.innerHeight);
+  var svg7 = SVG(window.innerWidth, window.innerHeight);
+  var svg8 = SVG(window.innerWidth, window.innerHeight);
+  var svg9 = SVG(window.innerWidth, window.innerHeight);
+  var svg10 = SVG(window.innerWidth, window.innerHeight);
+  var svg11 = SVG(window.innerWidth, window.innerHeight);
+  var svg12 = SVG(window.innerWidth, window.innerHeight);
+
+
+svg1.animate = function (e) {
+  svg1.removeChildren();
+  svg1.rect(e.time * 40, 100, 100, 100);
+}
+svg2.line(80, 900, 580, 20)
+  .stroke('sienna')
+  .strokeWidth(7)
+  .strokeDasharray('7 5');
+
+svg3.circle(150, 75, 50)
+  .fill('peru');
+
+var c = svg4.circle(25, 25, 25)
+  .fill('wheat');
+
+svg4.animate = function (e) {
+  var x = Math.sin(e.time) * 100 + 150;
+  c.setCenter(x, 75);
+};
+
+svg5.circle(600, 25, 25)
+  .fill('fuchsia');
+
+
+
+</script>
+</body>
+</html>

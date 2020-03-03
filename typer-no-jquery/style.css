@@ -1,0 +1,26 @@
+body {
+  font-family: 'Krona One', sans-serif;
+  font-size: 72px;
+  line-height: 1em;
+  color: rgb(255, 36, 121);
+  background-color: #04FF78;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+#cursor {
+  animation: blinker 1s step-end infinite;
+  /*you can change 'step-end' to 'linear' for smooth transition*/
+  font-family: 'Exo 2', sans-serif;
+}
+
+#container {
+  background-color: #04FF78;
+  width: calc(100% - 100px);
+  padding: 50px;
+  margin: 50px auto;
+  word-wrap: break-word;
+  text-align: center;
+}

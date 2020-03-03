@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <title> dom level 1</title>
+    <style>
+    h1:nth-child(2) {}
+    .headers {}
+    </style>
+
+  <body>
+    <h1 id="title" class="headers">The history of 80's rom coms</h1>
+    <h1 id="titles" class="headers">The history of 80's rom coms</h1>
+
+  </body>
+  <nav></nav>
+  <script>
+
+    // part 1 capturing the element get element + JS
+    var header = document.getElementById("title");
+    console.log(header);
+    header.style.color = "red"; //header= var called header - style=css - color= change color to red
+
+    document.querySelector("#title").style.color = "green"; //querySelector is for IDS
+
+    var headers = document.querySelectorAll(".headers"); //querySelectorAll looks for CLASS
+    console.log(headers);
+    headers[1].style.color = "purple"; //arrays are variables that hold more variables
+    // ^^ headers [0] takes the first class [0,1,2..etc.]
+    //nodelist is the amount of arrays- jumps to body <h1> classes
+    // part 2 creating elements
+
+    // step 1 create the element
+    var h1 = document.createElement("h1"); //in html creating <h1> with below text
+    //step 2: style it
+    h1.innerHTML = "The history of 90's rom coms"; //innerHTML = text between these brackets >  <
+    console.log(h1);
+    // step 3: append it to the page
+    document.body.appendChild(h1);
+
+    var text = document.createElement("p");
+    text.innerHTML = "hello";
+    document.querySelector("nav").appendChild(text);
+
+  </script>

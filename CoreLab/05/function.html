@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+  <title>functions</title>
+
+  <body></body>
+  <script>
+
+    // this code does not run immediately. only when we tell it to
+    function randomInteger() {
+      // this is the code that's inside the function
+      var number = Math.floor(Math.random() * 256);
+      console.log(number);
+    }
+
+
+
+    randomInteger();
+    randomInteger();
+
+    Math.random(); //this TURNS INTO a number
+
+    // Q: how do we make our function turn into a number?
+    // A: "return"
+
+
+    function randomInteger2() {
+      // this is the code that's inside the function
+      var number = Math.floor(Math.random() * 256);
+      console.log(number);
+      return number; //so the number from line 27 would print again
+      // anything after here will not run. "RETURN" STOPS FUNCTION
+    }
+    // console.log NUMBER gets retunred l29 then randomInteger2 is that NUMBER
+    // gets then stored as p l33 then spits oout on l35
+
+    var p = randomInteger2();
+    var q = randomInteger2();
+    var r = randomInteger2();
+    var s = randomInteger2();
+    console.log("this one --->", p); // THIS LINE IS SAME AS L 27
+    console.log(p, q, r, s);
+
+    document.body.style.backgroundColor = "rgb(" + randomInteger2() + ", 0, " +
+    randomInteger2() + ")";
+
+  </script>
