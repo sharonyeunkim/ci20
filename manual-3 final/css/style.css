@@ -2,7 +2,6 @@
   don't do px, em, rems- but use for max/min height/width
   do    % vw, vh
   add set width and height to everything*/
-  
 #a {
   width: 20vw; /* default make responsive with vw */
   height: 20vw; /*not vh for mobile bc circle gets squished */
@@ -37,7 +36,7 @@
   }
   100% {
     left: 80%;
-    top: -40%;
+    top: -30%;
   }
 
 }
@@ -287,9 +286,9 @@
       }
   50% {opacity: 1;
       -webkit-transform: rotate(0deg);
-       -webkit-transform: scale( .5 );
+       -webkit-transform: scale( 1 );
       }
-  100% {-webkit-transform: scale( .5 );
+  100% {-webkit-transform: scale( 1 );
       -webkit-transform: rotate(50deg);
        opacity: 0;
    }
@@ -558,7 +557,7 @@
   }
   100% {
     left: 80%;
-    top: -40%;
+    top: -50%;
   }
 
 }

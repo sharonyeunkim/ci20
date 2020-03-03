@@ -23,22 +23,11 @@ aElement.addEventListener("animationend", function () {
 // CANVAS TO DRAW FUNCTIONS
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  // maximum-windowHeight(1800px);
   // background (200, 80 , 0);
   console.log ("setup")
 }
 
 
-// function triggerTwoLetters() {
-//   var ii = document.querySelectorAll("#i, #ii");
-//
-//   ii.classList.remove("active");
-//   void element.offsetWidth;
-//   element.classList.add("active");
-//   audio.play();
-//   console.log("ii is working");
-//
-// }
 
 // function to change body colors
 var spacebarcounter = 0
@@ -46,7 +35,7 @@ function spacebar() {
     if (spacebarcounter % 4 == 0) {
       background (253, 249 , 218);
     } else if (spacebarcounter % 4 == 1) {
-      background(229, 217, 227);
+      background (229, 217, 227);
     } else if (spacebarcounter % 4 == 2) {
       background (202, 208, 214);
     } else if (spacebarcounter % 4 == 3) {
@@ -59,7 +48,7 @@ function spacebar() {
 //Getting ID and CLASS to trigger.
 function triggerLetter(letter) {
   var element = document.querySelector("#" + letter );
-  // var audio = document.querySelector("." + letter);
+  var audio = document.querySelector("." + letter);
 
   element.classList.remove("active");         // auto removes "active" class aka animation after it plays
   void element.offsetWidth; //RESETS ANIMATION to beginning position
@@ -71,9 +60,9 @@ function triggerLetter(letter) {
 
 document.addEventListener("keypress", function(event){
   var keyCode = event.which; //event.which is thing for space on keycode spacebar bc doesn't have keyCode
-  var eventKey = event.key;
+  var eventKey = event.Key;
   if (keyCode == 32 ) spacebar(); //put before triggerLetter so it doesn't break spacebar
-  // if (eventKey == 73 ) triggerTwoLetters();
+  if (eventKey == 73 ) triggerTwoLetters();
   if(event.key) triggerLetter(event.key.toLowerCase()); //deals with keys aka keyCodes, not event.which
               //toLowerCase auto changes capital letters to lower. No need to state capitol "A, B, etc."
 });
