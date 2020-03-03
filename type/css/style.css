@@ -2,7 +2,9 @@
   don't do px, em, rems- but use for max/min height/width
   do    % vw, vh
   add set width and height to everything*/
-
+body {
+  overflow-y: hidden;
+}
 #a {
   width: 20vw; /* default make responsive with vw */
   height: 20vw; /*not vh for mobile bc circle gets squished */
