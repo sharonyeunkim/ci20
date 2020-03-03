@@ -4,6 +4,7 @@
   add set width and height to everything*/
 body {
   overflow-y: hidden;
+  margin: 0;
 }
 #a {
   width: 20vw; /* default make responsive with vw */
