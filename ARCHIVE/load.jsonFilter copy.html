@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <script>
+
+// for fetch to work we need a server
+    fetch("data.json")
+      .then(function(blob){ return blob.json(); })
+      .then(function(json){ buildPage(json); });
+
+  function buildPage(data) {
+    // console.log(data);
+    // for (var i = 0; i < data.length; i = i + 1) {
+    //   console.log(data[i]);
+    // }
+    //filter is asking for a true or false
+    //for each item we generate a true or false
+    //"entry" is an object
+    // entry is each object inside the data
+    var breakfast = data.filter(function(entry){ return entry.Type == "BREAKFAST"; });
+    console.log(breakfast);
+    // "data" is unaffected. the new array "breakfast" is a copy.
+  }
+
+// IN WEB TYPE IN http://localhost:8000/load.jsonFilter.html
+  </script>
+  </body>
+</html>

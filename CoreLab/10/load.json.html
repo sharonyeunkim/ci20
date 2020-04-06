@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <script>
+
+// for fetch to work we need a server
+    fetch("data.json")
+      .then(function(blob){ return blob.json(); })
+      .then(function(json){ buildPage(json); });
+
+  function buildPage(data) {
+    console.log(data);
+  }
+
+// http://localhost:8000/load.json.html
+  </script>
+  </body>
+</html>
