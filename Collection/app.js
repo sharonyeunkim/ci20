@@ -15,9 +15,9 @@ var recipeContainer = document.getElementById("recipe-container"); //the div we'
 //Example data. Your excel file will be converted into an array of JavaScript objects, where each row on the spreadsheet
 //         will be a unique JavaScript object. Each column "name, image, tags, etc." will become a property on the object and the data in the associated cell be the value of the property.
 
-// var data = (/dataCopy.json);
+var json = "data.json";
 fetch("data.json")
-      .then(function(blob){ return blob.json(); })
+      .then(function(blob){ return blob.json(); }) //what does .then mean?
       .then(function(json){ buildPage(json); });
 
   function buildPage(data) {
