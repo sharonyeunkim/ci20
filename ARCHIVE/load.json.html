@@ -9,6 +9,7 @@
   <script>
 
 // for fetch to work we need a server
+// it needs a connection - github
     fetch("data.json")
       .then(function(blob){ return blob.json(); })
       .then(function(json){ buildPage(json); });

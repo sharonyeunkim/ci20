@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--1. the paragraph with the filters on it-->
+  <p id="filter-paragraph">
+    <!--add a input + label combo for each different tag you have-->
+    For
+    <input type="checkbox" name="breakfast" id="breakfast">
+    <label for="breakfast">breakfast,</label>
+    <input type="checkbox" name="lunch" id="lunch">
+    <label for="lunch">lunch,</label>
+    <input type="checkbox" name="dinner" id="dinner">
+    <label for="dinner">dinner,</label>
+    <input type="checkbox" name="dessert" id="dessert">
+    <label for="dessert">dessert</label>
+    <!--just keep adding regular text to create "unclickable text, to make it into a sentence-->
+    <!--WARNING: MAKE SURE THAT THE NAME, ID AND FOR ATTRIBUTES ARE CONSISTENT WITH THE TAGS YOU GIVE EACH RECIPE IN YOUR EXCEL FILE. IF THERE ARE ERRORS, FIRST THING YOU SHOULD CHECK IS IF THERE ARE ANY TYPOS IN THE TAGS IN THE EXCEL FILES OR THE INPUT/LABEL ELEMENTS YOU CREATE HERE-->
+    <!--WARNING 2: FOR TAGS WITH 2+ WORDS, DON'T USE SPACES. EXAMPLE: "easy-to-make" instead of "easy to make"-->
+  </p>
+
+  <!--2. a list of recipe links we're gonna dynamically generate-->
+  <div id="recipe-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

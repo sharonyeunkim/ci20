@@ -9,3 +9,6 @@ localhost:8000
 this relates to your folder
 if you need to open a certain file,
 append the filename after localhost:8000/loadJson.html
+
+** but if you upload it to gihub pathway the internet is now the server so you don't need local localhost
+it didn't work before when you raw opened the index.html because it had no server. Hence the CORS error. 
