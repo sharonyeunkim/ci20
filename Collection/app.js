@@ -12,27 +12,42 @@ var recipeContainer = document.getElementById("recipe-container"); //the div we'
 /****************************************************/
 //NOTE: Replace this step with the JSON fetch functions once you're ready to integrate the data in your excel file
 
-//Example data. Your excel file will be converted into an array of JavaScript objects, where each row on the spreadsheet will be a unique JavaScript object. Each column "name, image, tags, etc." will become a property on the object and the data in the associated cell be the value of the property.
-var data = [
-  {
-    name: "tartar sauce",
-    image: "recipe-1.jpg",
-    tags: "breakfast, easy-to-make, salty",
-    recipe: "blah de daah"
-  },
-  {
-    name: "recipe-2",
-    image: "recipe-2.jpg",
-    tags: "dinner, easy-to-make, sweet",
-    recipe: "blah de daah"
-  },
-  {
-    name: "recipe-3",
-    image: "recipe-3.jpg",
-    tags: "lunch, breakfast, salty",
-    recipe: "blah de daah"
+//Example data. Your excel file will be converted into an array of JavaScript objects, where each row on the spreadsheet
+//         will be a unique JavaScript object. Each column "name, image, tags, etc." will become a property on the object and the data in the associated cell be the value of the property.
+
+// var data = (/dataCopy.json);
+fetch("data.json")
+      .then(function(blob){ return blob.json(); })
+      .then(function(json){ buildPage(json); });
+
+  function buildPage(data) {
+    console.log(data);
   }
-];
+// function splitData(data) {
+//   var json = '{"RecipeTitle": "", "Type": "", "Taste": "", "Attributes": "",}';
+//
+// }
+// var json = data
+// var data = [
+//   {
+//     name: "tartar sauce",
+//     image: "recipe-1.jpg",
+//     tags: "breakfast, easy-to-make, salty",
+//     recipe: "blah de daah"
+//   },
+//   {
+//     name: "recipe-2",
+//     image: "recipe-2.jpg",
+//     tags: "dinner, easy-to-make, sweet",
+//     recipe: "blah de daah"
+//   },
+//   {
+//     name: "recipe-3",
+//     image: "recipe-3.jpg",
+//     tags: "lunch, breakfast, salty",
+//     recipe: "blah de daah"
+//   }
+// ];
 
 //IMPORTANT NOTE: WHEN YOU ADD THE JSON FETCH INSTEAD OF THE ARRAY ABOVE, REPLACE THE CONTENTS OF THE LAST ".then()BLOCK WITH THE FOLLOWING:"
 //data = json;
