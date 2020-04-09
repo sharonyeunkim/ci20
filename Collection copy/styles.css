@@ -1,0 +1,9 @@
+/* hiding the "checkbox" component of the checkbox elements */
+input[type=checkbox] {
+  display: none;
+}
+
+/* change the color/add other kinds of css for the checked options through this selector */
+input[type=checkbox]:checked + label {
+  color: blue;
+} 
