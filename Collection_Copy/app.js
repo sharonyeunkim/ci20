@@ -1,44 +1,41 @@
-/**** WHAT WE'RE DOING IN THIS FILE ****/
-//1. Creating some dummy data for the example. For the actual project, replace this with the json fetch code
-//2. Keep track of which recipe "tags" the user has selected
-//3. Dynamically filter through your JSON data and show elements that match the user's tags
 
-/**** STEP 0: SELECTING ELEMENTS ****/
 var labels = document.querySelectorAll("label"); //all the label elements the user can click on
 var recipeContainer = document.getElementById("recipe-container"); //the div we're going to place the filtered recipe results into
 
-/****************************************************/
-/**** STEP 1: FETCHING DATA & STARTING TO USE IT ****/
-/****************************************************/
-//NOTE: Replace this step with the JSON fetch functions once you're ready to integrate the data in your excel file
+var json = "data.json";
+fetch("data.json")
+      .then(function(blob){ return blob.json(); }) //what does .then mean?
+      .then(function(json){ buildPage(json); });
 
-//Example data. Your excel file will be converted into an array of JavaScript objects, where each row on the spreadsheet
-//         will be a unique JavaScript object. Each column "name, image, tags, etc." will become a property on the object and the data in the associated cell be the value of the property.
-var data = ('dataCopy.json');
-function realData(data) {
-  var json = '{"RecipeTitle": "", "Type": "", "Taste": "", "Attributes"; "",}';
-}
-var json = data
-var data = [
-  {
-    name: "tartar sauce",
-    image: "recipe-1.jpg",
-    tags: "breakfast, easy-to-make, salty",
-    recipe: "blah de daah"
-  },
-  {
-    name: "recipe-2",
-    image: "recipe-2.jpg",
-    tags: "dinner, easy-to-make, sweet",
-    recipe: "blah de daah"
-  },
-  {
-    name: "recipe-3",
-    image: "recipe-3.jpg",
-    tags: "lunch, breakfast, salty",
-    recipe: "blah de daah"
+  function buildPage(data) {
+    console.log(data);
   }
-];
+
+ var json = '{"RecipeTitle": "", "Type": "", "Taste": "", "Attributes": "",}';
+// function splitData(data) {
+//
+// }
+// var json = data
+// var data = [
+//   {
+//     name: "tartar sauce",
+//     image: "recipe-1.jpg",
+//     tags: "breakfast, easy-to-make, salty",
+//     recipe: "blah de daah"
+//   },
+//   {
+//     name: "recipe-2",
+//     image: "recipe-2.jpg",
+//     tags: "dinner, easy-to-make, sweet",
+//     recipe: "blah de daah"
+//   },
+//   {
+//     name: "recipe-3",
+//     image: "recipe-3.jpg",
+//     tags: "lunch, breakfast, salty",
+//     recipe: "blah de daah"
+//   }
+// ];
 
 //IMPORTANT NOTE: WHEN YOU ADD THE JSON FETCH INSTEAD OF THE ARRAY ABOVE, REPLACE THE CONTENTS OF THE LAST ".then()BLOCK WITH THE FOLLOWING:"
 //data = json;
