@@ -110,13 +110,13 @@ function showRecipes(tags) {
 
   //STEP 3.2: FILTER OUR ENTIRE RECIPE LIST TO ONLY THE RECIPES THAT HAVE MATCHING TAGS
   //Loop through each recipe on our data list:
-  data.forEach(function (recipe) {
+  data.forEach(function (RecipeTitle) {
     //For each separate data point, see if it contains any of the tags the user has selected (accessible via the selectedTags array)
     //Loop through each tag the user has selected:
-    selectedTags.forEach(function (tag) {
+    selectedTags.forEach(function (Attribute) {
       //If a user-selected tag matches one of the tags the recipe has:
-      if (recipe.tags.includes(tag)) {
-        selectedRecipes.push(recipe); //add the recipe to the list of recipes to show
+      if (recipe.Attributes.includes(Attribute)) {
+        selectedRecipes.push(RecipeTitle); //add the recipe to the list of recipes to show
         return; //end the loop so that a recipe that has two matching recordings doesn't get listed twice
       }
       //NOTE: Learn more about the string includes function: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
@@ -127,7 +127,7 @@ function showRecipes(tags) {
   recipeContainer.innerHTML = ""; //delete the previous recipes shown by the previous set of filters
 
 
-  selectedRecipes.forEach(function(recipe) {
+  selectedRecipes.forEach(function(RecipeTitle) {
 
     var recipeLink = `
     <div class="recipe-link">
