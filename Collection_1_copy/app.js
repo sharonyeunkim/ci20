@@ -4,8 +4,8 @@
 //3. Dynamically filter through your JSON data and show elements that match the user's tags
 
 /**** STEP 0: SELECTING ELEMENTS ****/
-var labels = document.querySelectorAll("label"); //all the label elements the user can click on
-var recipeContainer = document.getElementById("recipe-container"); //the div we're going to place the filtered recipe results into
+var labels = document.querySelectorAll("label");
+var recipeContainer = document.getElementById("recipe-container");
 
 /****************************************************/
 /**** STEP 1: FETCHING DATA & STARTING TO USE IT ****/
@@ -14,7 +14,15 @@ var recipeContainer = document.getElementById("recipe-container"); //the div we'
 
 //Example data. Your excel file will be converted into an array of JavaScript objects, where each row on the spreadsheet
 //         will be a unique JavaScript object. Each column "name, image, tags, etc." will become a property on the object and the data in the associated cell be the value of the property.
-var json = ("data.json");
+
+var json =
+fetch("data.json")
+  .then(function(blob){ return blob.json(); })
+  .then(function(json){ buildPage(json); });
+
+function buildPage(data) {
+console.log(data);
+};
 console.log(json);
 
 // var data = ('dataCopy.json');
