@@ -24,12 +24,27 @@ function buildPage(data) {
 console.log(data);
 }
 
-data = json 
 
-// var data = ('dataCopy.json');
-// function realData(data) {
-//   var json = '{"RecipeTitle": "", "Type": "", "Taste": "", "Attributes"; "",}';
-// }
+var json =
+    fetch("data.json")
+    .then(function(blob){ return blob.json(); })
+    .then(function(json){ buildPage(json); });
+
+    function buildPage(data) {
+      console.log(data);
+
+data = json
+
+function realData(data) {
+ var data = [
+   {
+    "RecipeTitle": "",
+    "Type": "",
+    "Taste": "",
+    "Attributes"; ""
+    }
+];
+}
 // var json = data
 // var data = [
 //   {
