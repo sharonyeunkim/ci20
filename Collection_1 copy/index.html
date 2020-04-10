@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <p id="filter-paragraph">
+
+    For
+    <input type="checkbox" name="breakfast" id="breakfast">
+    <label for="breakfast">breakfast,</label>
+    <input type="checkbox" name="lunch" id="lunch">
+    <label for="lunch">lunch,</label>
+    <input type="checkbox" name="dinner" id="dinner">
+    <label for="dinner">dinner,</label>
+    <input type="checkbox" name="dessert" id="dessert">
+    <label for="dessert">dessert</label>
+  </p>
+
+  <div id="recipe-container"></div>
+
+<script>
+fetch("data.json")
+  .then(function(blob){ return blob.json(); })
+  .then(function(json){ buildPage(json); });
+
+function buildPage(data) {
+console.log(data);
+}
+</script>
+<script src="app.js"></script>
+</body>
+</html>
