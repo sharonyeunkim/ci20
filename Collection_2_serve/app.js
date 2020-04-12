@@ -15,36 +15,77 @@ var recipeContainer = document.getElementById("recipe-container");
 //Example data. Your excel file will be converted into an array of JavaScript objects, where each row on the spreadsheet
 //         will be a unique JavaScript object. Each column "name, image, tags, etc." will become a property on the object and the data in the associated cell be the value of the property.
 
-var data =
-  fetch("data.json")
-  .then(function(blob){ return blob.json(); })
-  .then(function(json){ buildPage(json); });
-
-function buildPage(data) {
-console.log(data);
-}
 
 
-var json =
-    fetch("data.json")
+// cd into directory
+// php -S localhost:8000
+fetch("data.json")
     .then(function(blob){ return blob.json(); })
     .then(function(json){ buildPage(json); });
 
-    function buildPage(data) {
-      console.log(data);
+//in below line computer knows data = json inside buildPage();
+function buildPage(data) { //anything that relates to data must happen in this function
+  var selectedTags = []; //an empty array that we will use to keep track of the tags the user has selected
 
-data = json
+  //STEP 2.2: ADD TAG TRACKING FUNCTIONALITY INTO EACH LABEL ELEMENT
 
-function realData(data) {
- var data = [
-   {
-    "RecipeTitle": "",
-    "Type": "",
-    "Taste": "",
-    "Attributes"; ""
+    labels.forEach(function (label) {
+      label.addEventListener("click", toggleLabelSelection);
+    })
+
+  //STEP 2.3: DEFINE THE TAG TRACKING FUNCTIONALITY
+    function toggleLabelSelection(event) {
+      var labelFor = event.target.htmlFor;
+      var labelInput = document.getElementById(labelFor)
+
+
+    if (!labelInput.checked) {
+      selectedTags.push(labelFor);
+    } else {
+      selectedTags = selectedTags.filter(tag => tag !== labelFor);
     }
-];
+
+    //dynamically filter the recipes being shown based on the updated tag list
+    showRecipes(selectedTags);
+  }}
+
+  /***********************************************************/
+  /**** STEP 3: FILTER RECIPES AND GENERATE HTML ELEMENTS ****/
+  /***********************************************************/
+  function showRecipes(tags) {
+    //STEP 3.1: CREATE AN ARRAY TO STORE THE RECIPES THAT MATCH THE USER'S SELECTED TAGS/FILTERS
+    var selectedRecipes = []; //same pattern as selectedTags above
+
+    //STEP 3.2: FILTER OUR ENTIRE RECIPE LIST TO ONLY THE RECIPES THAT HAVE MATCHING TAGS
+    //Loop through each recipe on our data list:
+    data.forEach(function (RecipeTitle) {
+      //For each separate data point, see if it contains any of the tags the user has selected (accessible via the selectedTags array)
+      //Loop through each tag the user has selected:
+      selectedTags.forEach(function (Attribute) {
+        //If a user-selected tag matches one of the tags the recipe has:
+        if (recipe.Attributes.includes(Attribute)) {
+          selectedRecipes.push(RecipeTitle); //add the recipe to the list of recipes to show
+          return; //end the loop so that a recipe that has two matching recordings doesn't get listed twice
+        }
+        //NOTE: Learn more about the string includes function: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+      });
+    });
+  console.log(data);
 }
+
+
+// function realData(data) {
+//  var data = [
+//    {
+//     "RecipeTitle": "",
+//     "Type": "",
+//     "Taste": "",
+//     "Attributes"; ""
+//     }
+// ];
+// }
+
+
 // var json = data
 // var data = [
 //   {
@@ -139,4 +180,4 @@ function showRecipes(tags) {
 
     recipeContainer.innerHTML += recipeLink; //Add the newly created recipe element into our HTML.
   });
-}
+  };
