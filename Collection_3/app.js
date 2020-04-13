@@ -50,11 +50,11 @@ function buildPage(data) { //anything that relates to data must happen in this f
 /**** STEP 3: FILTER RECIPES AND GENERATE HTML ELEMENTS ****/
 /***********************************************************/
 function showRecipes(attributes) {
-  var selectedAttributes = data;
+  // var selectedAttributes = data;
    data.forEach(function (RecipeTitle) {   //this line is looping through for matches
     selectedAttributes.forEach(function (attribute) {
        //If a user-selected tag matches one of the tags the recipe has:
-        if (recipe.Attributes.includes(Attribute)) {
+        if (selectedAttributes.Attributes.includes(attributes)) {
         selectedAttributes.push(RecipeTitle); //add the recipe to the list of recipes to show
         return; //end the loop so that a recipe that has two matching recordings doesn't get listed twice
       }
@@ -64,7 +64,7 @@ function showRecipes(attributes) {
  //STEP 3.3: SHOW THE FILTERED LIST OF RECIPES INSIDE THE RECIPECONTAINER ELEMENT (selected on line 8)
   recipeContainer.innerHTML = ""; //delete the previous recipes shown by the previous set of filters
 
-  selectedRecipes.forEach(function(recipe) {
+  selectedRecipes.forEach(function(selectedAttributes) {
 
     var recipeLink = `
     <div class="recipe-link">
