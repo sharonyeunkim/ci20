@@ -64,7 +64,7 @@ function showRecipes(attributes) {
  //STEP 3.3: SHOW THE FILTERED LIST OF RECIPES INSIDE THE RECIPECONTAINER ELEMENT (selected on line 8)
   recipeContainer.innerHTML = ""; //delete the previous recipes shown by the previous set of filters
 
-  selectedRecipes.forEach(function(RecipeTitle) {
+  selectedRecipes.forEach(function(recipe) {
 
     var recipeLink = `
     <div class="recipe-link">
