@@ -1,0 +1,70 @@
+/* hiding the "checkbox" component of the checkbox elements */
+html {
+  overflow: hidden;
+}
+body {
+  overflow-x: hidden;
+  position:relative;
+}
+input[type=checkbox] {
+  display: none;
+}
+
+/* change the color/add other kinds of css for the checked options through this selector */
+input[type=checkbox]:checked + label {
+  color: blue;
+}
+h1 {
+  color: blue;
+}
+#recipeList{
+  background-color: #eee;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100VW;
+  visibility: hidden;
+  overflow-y: scroll;
+}
+#recipes {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.recipe-link {
+  display: inline-block;
+  width: 100VW;
+  background-color: #ddd;
+  padding: 1em 2em 0em 1em;
+  overflow: hidden;
+}
+.recipe-link img {
+  width: 33%;
+}
+recipe {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+#recipeInstruction {
+  background-color: pink;
+  width: 100px;
+  height: 100px;
+  visibility: visible;
+}
+
+@media (max-width: 1200px) {
+  #recipes{
+    grid-template-columns: 50% 50%%;
+  }
+  .recipe-link img {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  #recipes{
+    grid-template-columns: 100%;
+  }
+  .recipe-link img {
+    width: 100%;
+  }
+}

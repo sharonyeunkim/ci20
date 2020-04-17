@@ -13,26 +13,20 @@ fetch("data.json")
     .then(function(json){ buildPage(json); });
 
 
-
-
 //in below line computer knows data = json inside buildPage();
 function buildPage(data) { //anything that relates to data must happen in this function
   console.log(data);       //  this is showing all recipies as stated from data
-
-/**************************************************/
-/*******PROFESSOR ROBBYS CODE TO FILTER **********/
-/**************************************************/
-    // for (var i = 0; i < data.length; i = i + 1) {
-    //     // console.log(data[i]);      this is showing all recipes from loop
-    //   }
-    // var breakfast = data.filter(function(entry){ return entry.Type == "BREAKFAST"; });
-    //       console.log(breakfast);
-/**************************************************/
-    var selectedAttributes = data;
-    console.log(selectedAttributes);
+    console.log(data);
       labels.forEach(function (label) {
       label.addEventListener("click", toggleLabelSelection);
     })
+
+   for (var i = 0; i < data.length; i = i + 1) {
+   console.log(data[i]);     //  this is showing all recipes from loop
+     }
+    var breakfast = data.filter(function(entry){ return entry.Type == "BREAKFAST"; });
+           console.log(breakfast);
+
 
     function toggleLabelSelection(event) {
       var labelFor = event.target.htmlFor;
@@ -40,22 +34,22 @@ function buildPage(data) { //anything that relates to data must happen in this f
       var labelInput = document.getElementById(labelFor);
                  console.log(labelInput);
       if (!labelInput.checked) {
-        selectedAttributes.push(labelFor); // push where?
+        recipe.push(labelFor); // push where?
     } else {
-     selectedAttributes = selectedAttributes.filter(attribute => attribute !== labelFor);
+     recipe = recipe.filter(attribute => attribute !== labelFor);
     }
-    showRecipes(selectedAttributes);
+    showRecipes(recipe);
       }
 /***********************************************************/
 /**** STEP 3: FILTER RECIPES AND GENERATE HTML ELEMENTS ****/
 /***********************************************************/
 function showRecipes(attributes) {
   // var selectedAttributes = data;
-   data.forEach(function (RecipeTitle) {   //this line is looping through for matches
-    selectedAttributes.forEach(function (attribute) {
+   recipe.forEach(function (RecipeTitle) {   //this line is looping through for matches
+    recipe.forEach(function (Atrributes) {
        //If a user-selected tag matches one of the tags the recipe has:
-        if (recipe.Attributes.includes(Attribute)) {
-        selectedAttributes.push(RecipeTitle); //add the recipe to the list of recipes to show
+        if (recipe.Attributes.includes(Attributes)) {
+        recipe.push(RecipeTitle); //add the recipe to the list of recipes to show
         return; //end the loop so that a recipe that has two matching recordings doesn't get listed twice
       }
        //NOTE: Learn more about the string includes function: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
