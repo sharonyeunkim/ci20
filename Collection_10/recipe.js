@@ -62,11 +62,13 @@ function showRecipes() {
       recipeListContainer.style.height = "100VW";
       recipeListContainer.style.background = "green";
       document.getElementById('recipes').appendChild(recipeListContainer)
-      {
-
-      }
+      {}
     });
-  }
+    // header.onclick = function(){
+    //   console.log("im clicked");
+    toggleSelectedRecipe(event);
+    };
+
        // lines 48 to 54 must be recoded using create element and append child. Then you can do
        //          on click handler for each thing in loop.
        // alternatively use createelement and append child to build DIV above.
@@ -83,9 +85,6 @@ function showRecipes() {
 //********* Document Clicked Individual Recipe ***********
 // *******  3) No, actually record data again**************************************
 
-
-// h1.onclick = function(){}
-//   recipe.inner.html.clear();
 function toggleSelectedRecipe(event){
   var selectedRecipeContainer = [];
   var clicked = event.target.onclick;
@@ -111,7 +110,7 @@ function showSelectedRecipe() {
       }
     });
   });
-  recipe.innerHTML = "";
+  recipeInstruction.innerHTML = "";
   selectedRecipe.forEach(function (recipe) {
     var selectedRecipeContainer = document.createElement('div');
     var selectedRecipeLink = document.getElementsByClassName('selectedRecipe-link');
