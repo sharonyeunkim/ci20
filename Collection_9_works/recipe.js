@@ -47,32 +47,39 @@ function showRecipes() {
   selectedRecipes.forEach(function (recipe) {
     var DOMrecipeListContainer = document.createElement('div');
     DOMrecipeListContainer.className = "recipe-link";
-    var img = document.createElement('img'); DOMrecipeListContainer.style.width = "100VW";
-    img.setAttribute('src', recipe.images);
-    DOMrecipeListContainer.appendChild(img);
-    DOMrecipeListContainer.style.height = "100VW";
-    DOMrecipeListContainer.style.background = "green";
-    document.body.appendChild(DOMrecipeListContainer);
+      var img = document.createElement('img');
+        img.setAttribute('src', recipe.images);
+      var h = document.createElement('H1'); //this is recipe.recipeTitle
+          var t = document.createTextNode(recipe.recipeTitle);
+          h.appendChild(t);
+      var p = document.createElement('P');
+          p.innerText = recipe.tags;
+      p.appendChild(h);
+      h.appendChild(img);
+      DOMrecipeListContainer.append(img, h, p);
+      DOMrecipeListContainer.style.width = "100VW";
+      DOMrecipeListContainer.style.height = "100VW";
+      DOMrecipeListContainer.style.background = "green";
+      document.getElementById('recipes').appendChild(DOMrecipeListContainer);
+                 // lines 48 to 54 must be recoded using create element and append child. Then you can do
+                //          on click handler for each thing in loop.
+                // alternatively use createelement and append child to build DIV above.
+               //  because h1.onclick = function() this can be the function to click when I call my title
+               //  this function needs to clear recipe.inner.html"" (line 46) then does the same thing again
+                //    rebuilds page with this full one screen page of recipe instructions.
   });
-  showrecipeInstructioncontainer();
+  // showrecipeInstructioncontainer();
 }
 
 
-// var recipeLink = `
-// <div class="recipe-link">
-//   <img src="${recipe.images}">
-//   <h1>${recipe.recipeTitle}</h1>
-//   <p>${recipe.tags}</p>
-// </div>
-// `;          // lines 48 to 54 must be recoded using create element and append child. Then you can do
-//             //          on click handler for each thing in loop.
-// recipes.innerHTML += recipeLink;
-//             // alternatively use createelement and append child to build DIV above.
-//            //  because h1.onclick = function() this can be the function to click when I call my title
-//            //  this function needs to clear recipe.inner.html"" (line 46) then does the same thing again
-//             //    rebuilds page with this full one screen page of recipe instructions.
-
-
+// var DOMrecipeListContainer = document.createElement('div');
+// DOMrecipeListContainer.className = "recipe-link";
+// var img = document.createElement('img'); DOMrecipeListContainer.style.width = "100VW";
+// img.setAttribute('src', recipe.images);
+// DOMrecipeListContainer.appendChild(img);
+// DOMrecipeListContainer.style.height = "100VW";
+// DOMrecipeListContainer.style.background = "green";
+// document.recipes.appendChild(DOMrecipeListContainer);
 //*****************************************************
 //********* Document Clicked Individual Recipe ***********
 // *******  3) No, actually record data again**************************************
