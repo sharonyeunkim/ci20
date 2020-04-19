@@ -1,7 +1,7 @@
 var data;
-var selectedTags = [];
 var labels = document.querySelectorAll("label");
 // var recipeList = document.getElementById("recipeList");
+var selectedTags = [];
 var recipes = document.getElementById("recipes");
 var recipeTemplate = document.getElementById("recipeTemplate");
 var recipeInstructioncontainer = document.getElementById("recipeInstructioncontainer");
@@ -36,6 +36,7 @@ function toggleLabelSelection(event) {
 function showRecipes() {
  var selectedRecipes = [];
   data.forEach(function (recipe) {  //could name it anything besides recipe.
+    // console.log(data);
     selectedTags.forEach(function (tag) {
       if (recipe.tags.includes(tag)) {
         selectedRecipes.push(recipe);
