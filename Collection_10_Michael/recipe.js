@@ -46,6 +46,9 @@ function showRecipes() {
   recipes.innerHTML = "";
   selectedRecipes.forEach(function (recipe) {
     var recipeListContainer = document.createElement('div');
+    var recipePage = document.createElement('a');
+    recipePage.href = 'javascript:recipePageFunction()'; // goes to line 75
+    recipeListContainer.appendChild(recipePage); //
     var recipeLink = document.getElementsByClassName('recipe-link');
     recipeListContainer.className = "recipe-link";
       var img = document.createElement('img');
@@ -57,7 +60,7 @@ function showRecipes() {
           p.innerText = recipe.tags;
       p.appendChild(h);
       h.appendChild(img);
-      recipeListContainer.append(img, h, p);
+      recipePage.append(img, h, p);  // changed from recipeListContainer
       recipeListContainer.style.width = "100VW";
       recipeListContainer.style.height = "100VW";
       recipeListContainer.style.background = "green";
@@ -66,8 +69,21 @@ function showRecipes() {
     });
     // header.onclick = function(){
     //   console.log("im clicked");
-    toggleSelectedRecipe(event);
+    // toggleSelectedRecipe(event);
     };
+
+function recipePageFunction(){  // Q: "javascript function create a load new html page"
+  console.log("recipePageFunction working");
+  // var windowNewPage = window.open('');
+  // windowNewPage.document.write('
+    var opened = window.open(""); // text wrapping for line 80
+    opened.document.write("<html><head><title>MyTitle</title></head><body> <h1> i'm working</h1></body></html>"); 
+  }
+  // var doc = document.implementation.createHTMLDocument("recipeinstruction");
+  // window.open('javascript:recipeinstruction.html');
+  // var img = document.createElement('img');
+  //   img.setAttribute('src', recipe.images);
+  // doc.body.appendChild(img);
 
        // lines 48 to 54 must be recoded using create element and append child. Then you can do
        //          on click handler for each thing in loop.
@@ -85,53 +101,53 @@ function showRecipes() {
 //********* Document Clicked Individual Recipe ***********
 // *******  3) No, actually record data again**************************************
 
-function toggleSelectedRecipe(event){
-  var selectedRecipeContainer = [];
-  var clicked = event.target.onclick;
-  var clickedRecipeInstruction = document.getElementById(clicked);
-      if (recipeInstruction == "clicked") {
-        selectedRecipeContainer.push(clickedRecipeInstruction);
-      } else {
-        selectedRecipeContainer = selectedRecipeContainer.filter(tag => tag !== clicked);
-      }
-      showSelectedRecipe();
-}
+// function toggleSelectedRecipe(event){
+//   var selectedRecipeContainer = [];
+//   var clicked = event.target.onclick;
+//   var clickedRecipeInstruction = document.getElementById(clicked);
+//       if (recipeInstruction == "clicked") {
+//         selectedRecipeContainer.push(clickedRecipeInstruction);
+//       } else {
+//         selectedRecipeContainer = selectedRecipeContainer.filter(tag => tag !== clicked);
+//       }
+//       showSelectedRecipe();
+// }
 // *******************************************************
 // ****** Shows the Selected Recipe ********
 //*****************************************************
-function showSelectedRecipe() {
- var selectedRecipe = [];
- var userSelectedRecipe = [];
-  data.forEach(function (recipe) {  //could name it anything besides recipe.
-    userSelectedRecipe.forEach(function (tag) {
-      if (recipe.tags.includes(tag)) {
-        selectedRecipe.push(recipe);
-        return;
-      }
-    });
-  });
-  recipeInstruction.innerHTML = "";
-  selectedRecipe.forEach(function (recipe) {
-    var selectedRecipeContainer = document.createElement('div');
-    var selectedRecipeLink = document.getElementsByClassName('selectedRecipe-link');
-    selectedRecipeContainer.className = "selectedRecipe-link";
-      var imgg = document.createElement('img');
-        img.setAttribute('src', recipe.images);
-      var hh = document.createElement('H1');
-          var tt = document.createTextNode(recipe.recipeTitle);
-          hh.appendChild(tt);
-      var pp = document.createElement('P');
-          pp.innerText = recipe.tags;
-      pp.appendChild(hh);
-      hh.appendChild(imgg);
-      selectedRecipeContainer.append(imgg, hh, pp);
-      selectedRecipeContainer.style.width = "100VW";
-      selectedRecipeContainer.style.height = "100VW";
-      selectedRecipeContainer.style.background = "pink";
-      document.getElementById('recipeInstruction').appendChild(selectedRecipeContainer)
-      { }
-    });
-  }
+// function showSelectedRecipe() {
+//  var selectedRecipe = [];
+//  var userSelectedRecipe = [];
+//   data.forEach(function (recipe) {  //could name it anything besides recipe.
+//     userSelectedRecipe.forEach(function (tag) {
+//       if (recipe.tags.includes(tag)) {
+//         selectedRecipe.push(recipe);
+//         return;
+//       }
+//     });
+//   });
+//   recipeInstruction.innerHTML = "";
+//   selectedRecipe.forEach(function (recipe) {
+//     var selectedRecipeContainer = document.createElement('div');
+//     var selectedRecipeLink = document.getElementsByClassName('selectedRecipe-link');
+//     selectedRecipeContainer.className = "selectedRecipe-link";
+//       var imgg = document.createElement('img');
+//         img.setAttribute('src', recipe.images);
+//       var hh = document.createElement('H1');
+//           var tt = document.createTextNode(recipe.recipeTitle);
+//           hh.appendChild(tt);
+//       var pp = document.createElement('P');
+//           pp.innerText = recipe.tags;
+//       pp.appendChild(hh);
+//       hh.appendChild(imgg);
+//       selectedRecipeContainer.append(imgg, hh, pp);
+//       selectedRecipeContainer.style.width = "100VW";
+//       selectedRecipeContainer.style.height = "100VW";
+//       selectedRecipeContainer.style.background = "pink";
+//       document.getElementById('recipeInstruction').appendChild(selectedRecipeContainer)
+//       { }
+//     });
+//   }
 // ************************************************
 document.getElementById('showMyRecipes').addEventListener('click', function(){
   recipeList.style.visibility = "visible"
