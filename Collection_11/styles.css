@@ -1,6 +1,9 @@
 /* hiding the "checkbox" component of the checkbox elements */
+*{
+  outline: 3px dotted black;
+}
 html {
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%;
 }
 body {
@@ -28,15 +31,18 @@ h1 {
   overflow-y: scroll;
 }
 #recipes {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
+  display: flex;
+  /* grid-template-columns: 33% 33% 33%; */
+  flex-wrap: wrap;
 }
 .recipe-link {
+  width: 33%;
+  height: 400px;
+  min-width: 300px;
   display: inline-block;
-  width: 100VW;
   background-color: #ddd;
   padding: 1em 2em 0em 1em;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .recipe-link img {
   width: 33%;
