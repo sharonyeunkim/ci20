@@ -4,6 +4,7 @@ var labels = document.querySelectorAll("label");
 // var recipeList = document.getElementById("recipeList");
 var selectedTags = [];
 var recipe
+
 var recipes = document.getElementById("recipes");
 var recipeTemplate = document.getElementById("recipeTemplate");
 var recipeInstructioncontainer = document.getElementById("recipeInstructioncontainer");
