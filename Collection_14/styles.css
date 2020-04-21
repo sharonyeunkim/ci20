@@ -80,6 +80,15 @@ label{
   color: white;
   font-family: helvetica;
 }
+/* #photo{
+  width: 70VW;
+  height: 40VH;
+  top: 30%;
+  text-align: center;
+  right: .01VW;
+  position: absolute;
+  background-image: url("/images/chia_seed.jpg");
+} */
 #filter{
   /* background-color: #e6e7e8; */
   text-align: center;
@@ -146,6 +155,9 @@ label{
   font-weight: bold;
   padding-left: 1em;
   color: black;
+}
+#recipeList h2:hover{
+color: #6F96F8;
 }
 #recipes {
   display: flex;
