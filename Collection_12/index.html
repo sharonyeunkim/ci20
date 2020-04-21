@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--STEP ONE FILTER CONTAINER -->
+<div id="filter">
+  <p id="filter-paragraph">
+    For
+    <input type="checkbox" name="breakfast" id="breakfast">
+    <label for="breakfast">breakfast,</label>
+    <input type="checkbox" name="lunch" id="lunch">
+    <label for="lunch">lunch,</label>
+    <input type="checkbox" name="dinner" id="dinner">
+    <label for="dinner">dinner,</label>
+    <input type="checkbox" name="dessert" id="dessert">
+    <label for="dessert">dessert</label>
+  </p>
+    <button id ="showMyRecipes">
+      Show My Recipes
+    </button>
+</div>
+<!--STEP 3 DETAILED RECIPE-->
+<div id="individualRecipe">
+  <!-- 1) in JS inner html dynamically insert recipe attributes.
+       2) in the innerHTML add show/visible class
+       3) then target in css and add hidden/show on click button.-->
+    <!-- <button id="closeRecipe"> close Recipe
+   </button> -->
+   <!-- <div id="recipeInstruction">
+   </div> -->
+</div>
+
+<!--STEP TWO RECIPE LIST -->
+<div id="recipeList">
+    <button id= "closelist">
+      close list
+    </button>
+    <div id="recipes">
+    </div>
+</div>
+
+
+<script src="recipe.js"></script>
+</body>
+</html>

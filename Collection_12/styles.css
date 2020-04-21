@@ -1,0 +1,151 @@
+/* hiding the "checkbox" component of the checkbox elements */
+*{
+  outline: 3px dotted black;
+}
+html {
+  /* overflow: hidden; */
+  /*height: 100%;*/
+}
+body {
+  /*overflow-x: hidden;*/
+  /*position:relative;*/
+  overflow:auto;
+}
+input[type=checkbox] {
+  display: none;
+}
+
+/* change the color/add other kinds of css for the checked options through this selector */
+input[type=checkbox]:checked + label {
+  color: pink;
+  font-family: "helvetica", bold;
+}
+p{
+  color: white;
+  font-family: helvetica;
+}
+label{
+  color: white;
+  font-family: helvetica;
+}
+#filter{
+  background-color: #e6e7e8;
+  text-align: center;
+}
+#filter-paragraph{
+  text-align: center;
+  padding-top: 10em;
+  padding-bottom: 2em;
+}
+/* h1 {
+  color: #6F96F8;
+  font-family: helvetica;
+  font-size: 2em;
+} */
+#recipeList{
+  background-color: green;
+  top: 0;
+  left: 0;
+  /*position: fixed;*/
+  width: 100VW;
+  visibility: hidden;
+  /*overflow-y: scroll;*/
+}
+#recipes {
+  display: flex;
+  /* grid-template-columns: 33% 33% 33%; */
+  flex-wrap: wrap;
+  font-family:
+}
+.recipe-link {
+  background-color: green;
+  width: 31%;
+  height: 30VW;
+  min-width: 200px;
+  display: inline-block;
+  padding: 1em 0em 0em 1em;
+  /* overflow: hidden; */
+}
+.recipe-link h1 {
+  font-family: helvetica;
+  font-size: 1.2em;
+}
+.recipe-link img {
+  /* text-align: center; */
+  width: 100%;
+  max-width: 100VW;
+  min-width: 10VW;
+}
+recipe {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+#recipeInstruction {
+  background-color: pink;
+  width: 100px;
+  height: 100px;
+  visibility: visible;
+}
+
+@media (max-width: 1200px) {
+  #recipes{
+    grid-template-columns: 50% 50%%;
+  }
+}
+@media (max-width: 600px) {
+  #recipes{
+    grid-template-columns: 100%;
+  }
+  .recipe-link img {
+    width: 100%;
+  }
+}
+
+
+/*//Zintis code*/
+
+.recipe-container{
+  background-color: #afafaf;
+  display: grid;
+  grid-template-columns: (3, 1fr);
+  font-family: helvetica;
+  padding: 2em;
+}
+.recipe-container h1 {
+  color: #6F96F8;
+  font-family: helvetica;
+  font-size: 2em;
+}
+.imageDiv{
+  padding-left: 5em;
+  height:100vh;
+  /*max-height:500px;*/
+  max-width: 60VW;
+  min-width: 20VW;
+  width:33%;
+  background-position: center;
+  background-size:cover;
+  grid-column: 1/2;
+}
+.recipeText{
+  padding-left: 2em;
+  grid-column: 2/4;
+}
+.ingredientsList{
+  grid-column: 2/3;
+  background-color: pink;
+}
+.preparationsList{
+  grid-column: 3/4;
+  float: right;
+}
+
+#showMyRecipes{
+  padding:20px;
+  border-radius: 10px;
+  background-color:lightpink;
+  color:white;
+  font-size:30px;
+  font-weight: 700;
+}
