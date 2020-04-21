@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--STEP ONE FILTER CONTAINER -->
+<div id="appetime"></div>
+<div id="filter">
+  <p id="filter-paragraph">
+    <!-- <div class="p one">
+    <p>  -->
+      For
+    <input type="checkbox" name="breakfast" id="breakfast">
+    <label for="breakfast">breakfast,</label>
+    <input type="checkbox" name="lunch" id="lunch">
+    <label for="lunch">lunch,</label>
+    <input type="checkbox" name="dinner" id="dinner">
+    <label for="dinner">dinner,</label>
+    <input type="checkbox" name="dessert" id="dessert">
+    <label for="dessert">dessert,</label>
+  <!-- </p></div>
+
+    <div class="p two">
+    <p> -->
+    <input type="checkbox" name="snacking" id="snacking">
+    <label for="snacking">snacking,</label>
+    I'm craving something <br>
+  <!-- </p></div>
+
+    <div class="p three">
+      <p> -->
+    <input type="checkbox" name="sweet" id="sweet">
+    <label for="sweet">sweet,</label>
+    <input type="checkbox" name="salty" id="salty">
+    <label for="salty">salty</label>
+    that's also
+    <input type="checkbox" name="healthy" id="healthy">
+    <label for="healthy">healthy,</label>
+    <input type="checkbox" name="vegan" id="vegan">
+    <label for="vegan">vegan,</label> or
+    <input type="checkbox" name="easy" id="easy">
+    <label for="easy">easy to make.</label>
+  <!-- </p></div>
+  </div> -->
+  </p>
+    <button id ="showMyRecipes" data-goto="recipeList">
+      Show My Recipes
+    </button>
+</div>
+<!--STEP 3 DETAILED RECIPE-->
+<div id="individualRecipe">
+  <!-- 1) in JS inner html dynamically insert recipe attributes.
+       2) in the innerHTML add show/visible class
+       3) then target in css and add hidden/show on click button.-->
+    <!-- <button id="closeRecipe"> close Recipe
+   </button> -->
+   <!-- <div id="recipeInstruction">
+   </div> -->
+</div>
+
+<!--STEP TWO RECIPE LIST -->
+<div id="recipeList" data-goto="individualRecipe">
+    <button id= "closelist">
+      close list
+    </button>
+    <h2> My Curated Recipes </h2>
+    <div id="recipes">
+    </div>
+</div>
+<a href="#filter">FILTER</a>
+
+<script src="recipe.js"></script>
+
+<script type="text/javascript">
+
+//Adds the
+$('#recipeList').on('click', function () {
+  var goHere = $(this).data('goto')
+  if (goHere) {
+      var offset = $('#' + goHere).offset()
+
+      $('html, body').animate({
+        scrollTop: offset.top
+      })
+  }
+})
+$('#showMyRecipes').on('click', function () {
+  var goThere = $(this).data('goto')
+  if (goThere) {
+      var offset = $('#' + goThere).offset()
+
+      $('html, body').animate({
+        scrollTop: offset.top
+      })
+  }
+})
+</script>
+</body>
+</html>

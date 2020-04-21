@@ -1,0 +1,353 @@
+/* hiding the "checkbox" component of the checkbox elements */
+*{
+  /* outline: 3px dotted black; */
+}
+html {
+  /* overflow: hidden; */
+  /*height: 100%;*/
+}
+body {
+  /*overflow-x: hidden;*/
+  /*position:relative;*/
+  overflow:auto;
+}
+#appetime{
+  padding-top: 1.6em;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  /* padding-left: 45VW; */
+}
+#appetime:after {
+  padding-top: 1em;
+  font-size: 1.3em;
+  color: black;
+  content: 'APPETIME';
+  font-family: helvetica;
+  font-weight: bold;
+}
+#appetime:hover:after {
+  /* display: none; */
+  content: 'Designed by Sharon Yeun Kim';
+  text-align: center;
+  color: #8E63EA;
+    /* content: 'ADD'; */
+}
+/* #appetime:hover p:after{
+  content: 'ADD';
+  /* color: black; }*/
+/* .p.one p{
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+  font-family: helvetica;
+}
+.p.two p{
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+  font-family: helvetica;
+}
+.p.three p{
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+  font-family: helvetica;
+} */
+p{
+  font-size: 2em;
+  font-family: helvetica;
+  font-weight: bold;
+}
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox]+ label {
+  color: transparent;
+  -webkit-text-stroke: .5px black;
+  font-family: 'helvetica';
+  font-weight: bold;
+  font-size: 1em;
+}
+/* change the color/add other kinds of css for the checked options through this selector */
+input[type=checkbox]:checked + label {
+  color: #6F96F8;
+  font-family: "helvetica", bold;
+  -webkit-text-stroke: 0;
+  font-size: 1em;
+}
+label{
+  color: white;
+  font-family: helvetica;
+}
+#filter{
+  /* background-color: #e6e7e8; */
+  text-align: center;
+  padding-bottom: 35VH;
+  padding-left: 12.25em;
+  padding-right: 12.25em;
+}
+#filter-paragraph{
+  text-align: center;
+  padding-top: 35VH;
+  padding-bottom: 1em;
+  opacity: 1;
+  animation: fadeInOpacity 1.0s forwards;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	/* animation-timing-function: ease-in; */
+	animation-duration: 1.75s;
+}
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+    transform: translate(0, -35px);
+	}
+  /* 95% {
+		opacity: .9;
+    transform: translate(0px, -60px);
+	} */
+	100% {
+		opacity: 1;
+    transform: translate(0px, -85px);
+    animation-timing-function: ease-out;
+	};
+}
+/* #filter-paragraph {
+    opacity: 0;
+}
+
+#filter-paragraph.load {
+  opacity: 1;
+  font-size: 21px;
+  margin-top: 25px;
+  text-align: center;
+
+  -webkit-transition: opacity 2s ease-in;
+     -moz-transition: opacity 2s ease-in;
+      -ms-transition: opacity 2s ease-in;
+       -o-transition: opacity 2s ease-in;
+          transition: opacity 2s ease-in;
+} */
+
+#recipeList{
+  /* background-color: green; */
+  top: 0;
+  left: 0;
+  padding-bottom: 1em;
+  /*position: fixed;*/
+  width: 100VW;
+  visibility: hidden;
+  /*overflow-y: scroll;*/
+}
+#recipeList h2{
+  font-size: 2em;
+  font-family: helvetica;
+  font-weight: bold;
+  padding-left: 1em;
+  color: black;
+}
+#recipes {
+  display: flex;
+  /* grid-template-columns: 33% 33% 33%; */
+  flex-wrap: wrap;
+  font-family:
+}
+.recipe-link {
+  /* background-color: green; */
+  width: 29%;
+  height: 30VW;
+  min-width: 200px;
+  display: inline-block;
+  padding: .2em .2em .2em 2.5em;
+  padding-bottom: -8em;
+  /* overflow: hidden; */
+}
+.recipe-link h1 {
+  font-family: helvetica;
+  font-size: 1.2em;
+}
+.recipe-link img {
+  /* text-align: center; */
+  width: 100%;
+  border-radius: 20px;
+  max-width: 100VW;
+  min-width: 10VW;
+}
+.recipe-link img:hover {
+  box-shadow: 2px 2px 20px 3px #d6d6d6;
+}
+.recipe-link h1{
+  color: black;
+}
+.recipe-link h1:hover{
+  /* text-decoration: underline; */
+  color: #FD7676;
+}
+.recipe-link p{
+  color: #6F96F8;
+  font-size: 1em;
+  font-weight: normal;
+}
+recipe {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+#recipeInstruction {
+  background-color: pink;
+  width: 100px;
+  height: 100px;
+  visibility: visible;
+}
+
+
+
+
+/*//Zintis code*/
+
+.recipe-container{
+  /* background-color: #afafaf; */
+  display: grid;
+  grid-template-columns: (3, 1fr);
+  font-family: helvetica;
+  padding: 2em;
+  padding-bottom: 3em;
+}
+.recipe-container h1 {
+  color: #6F96F8;
+  font-family: helvetica;
+  font-size: 2em;
+}
+.imageDiv{
+  padding-left: 5em;
+  height:80VH;
+  border-radius: 25px;
+  /*max-height:500px;*/
+  max-width: 60VW;
+  min-width: 20VW;
+  width:33%;
+  background-position: center;
+  background-size:cover;
+  grid-column: 1/2;
+  padding-right: 4em;
+}
+.recipeText{
+  padding-left: 2em;
+  grid-column: 2/4;
+  padding-left: 3.5em;
+  padding-right: 4em;
+}
+.recipeText h1:hover{
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+  position: relative;
+  padding-bottom:color: #6F96F8;
+}
+.ingredientsList{
+  grid-column: 2/3;
+  /* background-color: pink; */
+}
+.preparationsList{
+  grid-column: 3/4;
+  float: right;
+  padding-right: 5em;
+}
+
+#showMyRecipes{
+  padding:22px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  border-radius: 30px;
+  background-color:#FD7676;
+  color:white;
+  font-size:30px;
+  font-weight: 700;
+}
+#showMyRecipes:hover {
+  background-color: #FFBDBD
+}
+#showMyRecipes:active {
+  background-color: #FFBDBD;
+  color: #d6d6d6;
+  -webkit-box-shadow: inset 0px 0px 15px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 5px 10px #c1c1c1;
+  box-shadow: 2px 2px 20px 3px #d6d6d6;
+  border: none;
+  outline: none;
+
+}
+
+@media (max-width: 1200px) {
+  #recipes{
+    grid-template-columns: 50% 50%%;
+  }
+  .imageDiv{
+    max-height: 90VH;
+  }
+}
+@media (max-width: 1180px) {
+  #recipes{
+    grid-template-columns: 50% 50%%;
+  }
+  .preparationsList{
+    padding-right: 0em;
+  }
+  .imageDiv{
+    max-height: 90VH;
+    /* padding-top: 8em; */
+  }
+
+}
+
+@media (max-width: 600px) {
+  #recipes{
+    width: 100VW;
+    display: inline-grid;
+    grid-column: 100%;
+  }
+  .recipe-link {
+    width: 85VW;
+    padding-bottom: 12em;
+    padding-left: 1.4em;
+  }
+  .recipe-link p{
+    display: none;
+  }
+  .recipe-link img {
+    width: 100%;
+  }
+  .imageDiv{
+    max-width: 100VW;
+    width:80%;
+    max-height: 50VH;
+  }
+  .recipeText{
+    padding-left:0;
+  }
+  .ingredientsList{
+    padding-left:0;
+  }
+  .ingredientsList li {
+    margin-left:10px;
+  }
+  .recipe-container{
+    /* background-color: #afafaf; */
+    display: block;
+    /*grid-template-columns: (3, 1fr);*/
+    font-family: helvetica;
+    padding: 2em;
+  }
+  .preparationsList{
+    /* background-color: pink; */
+    padding-left: .7em;
+    list-style-position: outside;
+  }
+  #filter{
+    text-align: center;
+    padding-left: 2.5em;
+    padding-right: 1.5em;
+  }
+
+}

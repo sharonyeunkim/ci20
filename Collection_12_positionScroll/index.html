@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 </head>
 <body>
 <!--STEP ONE FILTER CONTAINER -->
@@ -36,15 +37,30 @@
 </div>
 
 <!--STEP TWO RECIPE LIST -->
-<div id="recipeList">
+<div id="recipeList" data-goto="individualRecipe">
     <button id= "closelist">
       close list
     </button>
     <div id="recipes">
     </div>
 </div>
-
+<a href="#filter">FILTER</a>
 
 <script src="recipe.js"></script>
+
+<script type="text/javascript">
+
+//Adds the
+$('#recipeList').on('click', function () {
+  var goHere = $(this).data('goto')
+  if (goHere) {
+      var offset = $('#' + goHere).offset()
+
+      $('html, body').animate({
+        scrollTop: offset.top
+      })
+  }
+})
+</script>
 </body>
 </html>

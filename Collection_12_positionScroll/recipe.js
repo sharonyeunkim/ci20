@@ -93,7 +93,7 @@ function showRecipes() {
         // DOMrecipeListContainer.style.width = "500px";
         // DOMrecipeListContainer.style.height = "500px";
         DOMrecipeListContainer.style.background = "blue";
-        DOMrecipeListContainer.dataset.index = index;
+        DOMrecipeListContainer.dataset.index = recipe.index;
         document.getElementById('recipes').appendChild(DOMrecipeListContainer);
 
     });
