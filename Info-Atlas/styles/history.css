@@ -1,0 +1,11 @@
+#background{
+  background-image: url("../sketch.png");
+  background-size: 50VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  height: 100VW;
+  margin-top: -10em;
+  margin-left: 25VW;
+  z-index: -1;
+}
