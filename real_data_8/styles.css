@@ -16,5 +16,13 @@ a:hover {
 #defaultCanvas0 {
   margin-left: auto;
   margin-right: auto;
-  /* padding-left: 10em; */
+  padding-left: 13em;
+  padding-top: 3em;
+}
+p {
+  text-align: center;
+  color: white;
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 2em;
 }
