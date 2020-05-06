@@ -1,0 +1,166 @@
+h1 {
+  font-family: helvetica;
+  font-size: 9VW;
+  color: #ae2e2f;
+  margin-left: 1em;
+}
+h1:hover {
+  font-family: helvetica;
+  font-size: 9VW;
+  color: black;
+  margin-left: 1em;
+}
+html{
+  width: 100VH;
+  height: 1VW;
+  background-color: #f7f0e6;
+}
+
+#background{
+  background-image: url("../4.png");
+  background-size: 50VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  height: 50VW;
+  margin-top: -10em;
+  margin-left: 25VW;
+  z-index: -1;
+}
+#line {
+  width: 102VW;
+  height: 1em;
+  background-color: #f4b84b;
+  margin-top: -1em;
+  margin-left: -1em;
+}
+#line2 {
+  width: 102VW;
+  height: 1em;
+  background-color: #f4b84b;
+  margin-top: 3em;
+  margin-left: -1em;
+}
+.links{
+  display: flex;
+  flex-direction: column;
+  /* width: 100VW; */
+}
+a {
+  text-decoration: none;
+  font-family: helvetica;
+  color: black;
+  margin-left: 5.5VW;
+}
+a:hover {
+  text-decoration: none;
+  font-family: helvetica;
+  color: pink;
+  margin-left: 5.5VW;
+}
+.container {
+  width: auto;
+}
+#one {
+  background-image: url("../info_atlas-02.jpg");
+  background-size: 80VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  height: 50VW;
+  margin-top: 0em;
+  z-index: -1;
+}
+#two {
+  background-image: url("../info_atlas-10.jpg");
+  background-size: 80VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  height: 50VW;
+  margin-top: 0em;
+  z-index: -1;
+}
+#three {
+  background-image: url("../info_atlas-03.jpg");
+  background-size: 80VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  height: 50VW;
+  margin-top: 0em;
+  z-index: -1;
+}
+#four {
+  background-image: url("../info_atlas-04.jpg");
+  background-size: 80VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  height: 50VW;
+  margin-top: 0em;
+  z-index: -1;
+}
+#five {
+  background-image: url("../info_atlas-09.jpg");
+  background-size: 80VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  height: 50VW;
+  margin-top: 0em;
+  z-index: -1;
+}
+#six {
+  background-image: url("../info_atlas-05.jpg");
+  background-size: 80VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  height: 50VW;
+  margin-top: 0em;
+  z-index: -1;
+}
+#seven {
+  background-image: url("../info_atlas-06.jpg");
+  background-size: 80VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  margin-top: 0em;
+  z-index: -1;
+}
+#eight {
+  background-image: url("../info_atlas-07.jpg");
+  background-size: 80VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  height: 50VW;
+  margin-top: 0em;
+  z-index: -1;
+}
+#nine {
+  background-image: url("../info_atlas-08.jpg");
+  background-size: 90VW;
+  background-repeat: no-repeat;
+  padding: 0em;
+  width: 100VW;
+  height: 155VW;
+  margin-top: 0em;
+  z-index: -1;
+}
+p {
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 5VW;
+  color: #3b4e8b;
+  margin-left: 2em;
+}
+p:hover {
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 5VW;
+  color: #f4b84b;
+  margin-left: 2em;
+}
